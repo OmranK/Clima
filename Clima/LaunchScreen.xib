@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -9,10 +14,34 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mWh-Xg-fwK">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audiophilesEnt" translatesAutoresizingMaskIntoConstraints="NO" id="lig-iW-Hme">
+                    <rect key="frame" x="90" y="90" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="l59-XZ-a3c"/>
+                        <constraint firstAttribute="height" constant="300" id="loP-nF-aKR"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.16847139596939087" green="0.51802176237106323" blue="0.82454192638397217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mWh-Xg-fwK" secondAttribute="trailing" id="1XM-oF-NIV"/>
+                <constraint firstItem="lig-iW-Hme" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ff5-zg-iyl"/>
+                <constraint firstAttribute="bottom" secondItem="mWh-Xg-fwK" secondAttribute="bottom" id="LcE-3b-zQ6"/>
+                <constraint firstItem="mWh-Xg-fwK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LdU-tz-FZE"/>
+                <constraint firstItem="mWh-Xg-fwK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WtG-Vw-uoJ"/>
+                <constraint firstItem="lig-iW-Hme" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tYf-tS-zbh"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="audiophilesEnt" width="640" height="480"/>
+        <image name="loadBackground" width="500" height="500"/>
+    </resources>
 </document>
